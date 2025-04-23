@@ -39,7 +39,7 @@ export default function WishPage() {
     setRequests([...requests, json]);
 
     try {
-      const res = await axios.post('https://storylight.zeabur.app/webhook-test/wish-form', json);
+      const res = await axios.post('https://storylight.zeabur.app/webhook/wish-form', json);
       dispatch(pushMessage({
         success: true,
         message: '您的願望已提交，稍後您將收到一封確認郵件，我們會盡快與您聯繫。'

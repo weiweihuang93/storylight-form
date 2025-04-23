@@ -29,8 +29,9 @@ export default function WishPage() {
       isbn: data.isbn,
       publisher: data.publisher,
       price: data.price,
+      remark: data.remark,
       name: data.name,
-      phone: data.phone,
+      tel: data.tel,
       email: data.email,
       date: new Date().toLocaleDateString()
     };
@@ -175,8 +176,14 @@ export default function WishPage() {
                   {errors?.price && <p className="text-danger my-2">{errors.price.message}</p>}
               </div>
               <div className="col-12">
-                <label className="form-label fw-bold mb-lg-2 mb-1">備註</label>
-                <textarea className="form-control" rows="3" placeholder="填寫更多細節，如是否接受劃線書況等"></textarea>
+                <label htmlFor="remark" className="form-label fw-bold mb-lg-2 mb-1">備註</label>
+                <textarea
+                  {...register("remark")}
+                  id="remark"
+                  className="form-control"
+                  rows="3"
+                  placeholder="填寫更多細節，如是否接受劃線書況等"
+                ></textarea>
               </div>
               <div className="col-12">
                 <label htmlFor="name" className="form-label fw-bold mb-lg-2 mb-1">聯絡人姓名</label>
@@ -203,7 +210,6 @@ export default function WishPage() {
               </div>
               <div className="col-12">
                 <label htmlFor="email" className="form-label fw-bold mb-lg-2 mb-1">信箱<span className="text-danger">（請輸入真實的EMAIL信箱，稍後您將收到一封確認郵件。）</span></label>
-                
                 <input
                   {...register("email", {
                     required: "請輸入您的信箱",

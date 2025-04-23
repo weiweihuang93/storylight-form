@@ -10,6 +10,7 @@ const GOOGLE_BOOKS_API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 export default function WishPage() {
 
   const dispatch = useDispatch();
+  const [requests, setRequests] = useState([]);
 
   const {
     register,
@@ -115,7 +116,7 @@ export default function WishPage() {
                   {...register("title", { 
                     required: "請輸入書名", 
                     minLength: { value: 2, message: "書名最少2個字" }, 
-                    maxLength: { value: 30, message: "書名最多20個字" } 
+                    maxLength: { value: 40, message: "書名最多40個字" } 
                   })} 
                   id="title" type="text" className="form-control" placeholder="請輸入書名" required />
                   {errors?.title && <p className="text-danger my-2">{errors.title.message}</p>}
@@ -145,7 +146,7 @@ export default function WishPage() {
                   {...register("author", { 
                     required: "請輸入作者", 
                     minLength: { value: 2, message: "作者最少2個字" }, 
-                    maxLength: { value: 10, message: "作者最多10個字" } 
+                    maxLength: { value: 20, message: "作者最多20個字" } 
                   })} 
                   id="author" type="text" className="form-control" placeholder="請輸入作者" />
                   {errors?.author && <p className="text-danger my-2">{errors.author.message}</p>}
@@ -156,7 +157,7 @@ export default function WishPage() {
                   {...register("publisher", { 
                     required: "請輸入出版社", 
                     minLength: { value: 2, message: "出版社最少2個字" }, 
-                    maxLength: { value: 10, message: "出版社最多10個字" } 
+                    maxLength: { value: 20, message: "出版社最多20個字" } 
                   })} 
                   id="publisher" type="text" className="form-control" placeholder="請輸入出版社" />
                   {errors?.publisher && <p className="text-danger my-2">{errors.publisher.message}</p>}

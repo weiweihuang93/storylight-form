@@ -1,0 +1,91 @@
+.section-promotion{
+  &.bg{
+    background-color: $orange-dark;
+    color: white;
+    text-align: center;
+  }
+}
+
+.navbar-nav .nav-link{
+  @media (max-width: 992px) {
+    text-align: center;
+  }
+}
+
+.form-search{
+  position: relative;
+
+  .input-search{
+    padding-left: 44px;
+  }
+  .a-search{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: $orange-dark;
+
+    // reset 按鈕預設樣式
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .form-control-input:focus{
+    border-color: $orange;
+    box-shadow: 0 0 0 0.25rem rgba(235, 134, 41, 0.5); /* 橘色外光暈 */
+  }
+}
+
+.memberbar {
+  display: block;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.icon-badge{
+  position: relative;
+  display: inline-block;
+
+  .badge{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.6rem;
+    border-radius: 50%;
+    padding: 3px 6px;
+  }
+}
+
+.contact{
+  width: 48px;
+  height: 48px;
+
+  @media (max-width: 992px) {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.footer{
+  border-radius: 80px 80px 0 0;
+  &.bg{
+    background-color: $orange-dark;
+    color: white;
+  }
+
+  .footer-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  
+    @media (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

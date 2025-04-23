@@ -1,0 +1,68 @@
+// adminlogin
+.adminlogin .bg{
+  min-height: 100vh;
+  background-color: $gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// adminlayout
+.section-dashboard{
+  .bg{
+    background-color: $gray-100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  // adminproduct
+  .product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .product-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .product-name {
+    flex-grow: 1;
+    text-align: left;
+  }
+  .product-price,
+  .product-qty,
+  .product-status,
+  .product-action {
+    min-width: 100px;
+  }
+  
+  //adminorder
+  .order-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .order-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .order-date,
+  .order-username,
+  .order-price,
+  .order-paid,
+  .order-delivery{
+    width: 200px;
+  }
+  .order-action{
+    min-width: 100px;
+  }
+}

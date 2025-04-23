@@ -1,0 +1,200 @@
+.f-poppins{
+  font-family: "Poppins";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    letter-spacing: 0.1em;
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+.material-symbols-outlined {
+  color: inherit;
+  line-height: 1.5;
+  font-variation-settings:
+    'FILL' 0;
+
+  &:hover{
+    color: $orange;
+  }
+
+  &.icon-fill{
+    font-variation-settings: 'FILL' 1;
+    color: $orange
+  }
+}
+
+.icon-black{
+  color: black;
+}
+.icon-gray{
+  color: gray;
+}
+
+// btn
+.btn-orange{
+  background-color: $orange;
+  color: $white;
+  
+  &:hover{
+    background-color: $orange-dark;
+    color: $white;
+  }
+}
+
+.btn-xs{
+  padding: 0px 8px;
+}
+
+.text-sm{
+  font-size: 14px;
+}
+
+// 文字
+.title-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制最多 2 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.h-3em{
+  height: 48px;
+}
+
+@media (min-width: 993px) {
+  .line-clamp-lg-8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .h-lg-12em{
+    height: 192px;
+  }
+}
+
+// 斷行
+.text-pre-line {
+  white-space: pre-line;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+
+  &:hover {
+    background-color: white;
+  }
+}
+
+.navbar .nav-link{
+  color: black;
+  font-weight: $font-weight-semibold;
+
+  &:hover{
+    color: $orange-dark;
+  }
+  &.active{
+    color: $orange-dark;
+  }
+}
+
+.list-group-item:hover{
+  color: white;
+}
+
+.breadcrumb-item{
+  font-weight: $font-weight-semibold;
+}
+.breadcrumb-item.active{
+  font-weight: $font-weight-bold;
+}
+
+@media (min-width: 993px) {
+  .border-lg-end{
+    border-right: 1px solid #dee2e6;
+  }
+}
+
+.logo{
+  max-width: 100px;
+}
+
+.bonus-wrap {
+  background-color: #fff3e0; 
+  border: 2px solid #ff9800;
+  .product-img img {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 993px) {
+  .w-lg-50 {
+    width: 50%;
+  }
+}
+
+.title-decoration{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.title-decoration::after{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $orange-dark;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// 分頁
+.pagination-container{
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .box-shadow-lg{
+    box-shadow: $box-shadow;
+  }
+}
+
+// toast
+.toast {
+  opacity: 0;
+  transform: translateY(10px); /* 初始時稍微向下移動 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 平滑過渡效果 */
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0); /* 顯示時回到原來的位置 */
+}
+
+.toast.hide {
+  opacity: 0;
+  transform: translateY(10px); /* 隱藏時再向下移動 */
+}

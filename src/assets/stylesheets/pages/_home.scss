@@ -1,0 +1,275 @@
+// header-banner
+.header-banner {
+  position: relative;
+  height: calc(100vh - 125px);
+
+  .header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-info {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-20%);
+    color: white;
+  }
+}
+
+// 買書徵求
+.section-option {
+  .bg {
+    background-color: $secondary-500;
+  }
+
+  .option-card {
+    background-color: white;
+    box-shadow: $box-shadow;
+    display: block;
+    perspective: 1000px; // 讓翻轉更具 3D 效果
+    width: 100%;
+    height: 300px;
+  }
+  
+  .option-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .option-card:hover{
+    .option-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+  
+  // 正面設計
+  .option-card-front,
+  .option-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  // 背面設計
+  .option-card-back {
+    background-color: $orange-dark;
+    color: white;
+    transform: rotateY(180deg);
+  }
+}
+
+// 書籍分類
+.section-category {
+  .category-card{
+    display: block;
+    color: black;
+  }
+  .category-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: $orange;
+    color:white;
+
+    .material-symbols-outlined {
+      color: white;
+    }
+}
+
+  @media (max-width: 992px) {
+    .category-title{
+      font-size: 1rem;
+    }
+  }
+}
+
+// 新書上架
+// 滿額索取
+.section-product,
+.section-bonusproduct {
+
+  .product-card {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+
+  .sold-out-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sold-out-text {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transform: rotate(-45deg);
+  }
+  
+  // 限制高度
+  .product-img-h22 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+    
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .condition-tag {
+    background-color: $primary;
+    color: $white;
+    font-weight: $font-weight-bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transform: rotate(10deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+  }
+
+  .favorite-btn {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: $gray;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    border: 0px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8); // 懸停時的背景色更深
+      transform: scale(1.1); // 懸停時輕微放大
+    }
+    // 收藏狀態
+    &.active {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+// 加入會員活動
+.section-membership {
+  .bg {
+    background-color: $secondary-600;
+  }
+
+  .membership-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .membership-img1 {
+      position: absolute;
+      width: 200px;
+      bottom: 0;
+      left: 0;
+    }
+    .membership-img2 {
+      position: absolute;
+      width: 200px;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+
+    li{
+      position: relative;
+      font-size: 1.25rem;
+      font-weight: $font-weight-bold;
+      padding: 20px 24px 20px 40px;
+    }
+
+    .icon-fill {
+      position: absolute;
+      line-height: 24px;
+      left: 10px;
+    }
+  }
+}
+
+// 店家介紹
+.section-about {
+  .about-wrap {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: $box-shadow-sm;
+
+    @media (min-width: 992px) {
+      &:hover {
+        transform: translateY(-10%);
+      }
+    }
+  }
+}
+
+// FAQ
+.section-faq {
+  .bg {
+    background-color: $secondary-500;
+  }
+
+  .faq-q, .faq-a{
+    position: relative;
+    padding: 16px 40px;
+  }
+  
+  .faq-q::before{
+    position: absolute;
+    content: 'Q';
+    left: 10px;
+    font-size: 24px;
+  }
+  .accordion-body{
+    background: $gray-200;
+  }
+}

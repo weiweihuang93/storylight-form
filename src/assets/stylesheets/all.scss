@@ -1,0 +1,22 @@
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import "./base/base";
+@import "./pages/frontlayout";
+@import "./pages/home";
+@import "./pages/category";
+@import "./pages/product";
+@import "./pages/login";
+@import "./pages/cart";
+@import "./pages/admin";
+@import "./pages/wish";

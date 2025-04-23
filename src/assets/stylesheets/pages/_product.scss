@@ -1,0 +1,33 @@
+.section-product{
+  .product-promotion{
+    position: relative;
+    display: inline-block;
+    padding-left: 24px;
+  }
+  .product-promotion::before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 24px;
+    background-color: $orange-dark;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // swiper
+  .main-swiper{
+    height: 400px;
+  }
+  .thumb-swiper{
+    height: 150px;
+  }
+  .mySwiper2 img,
+  .thumb-swiper img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

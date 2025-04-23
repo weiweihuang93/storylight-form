@@ -1,0 +1,15 @@
+.login{
+  & .bg {
+    background-color: $secondary-600;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-img,
+  .login-form {
+    height: 660px;
+    overflow: hidden;
+  }
+}

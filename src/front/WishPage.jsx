@@ -21,7 +21,7 @@ export default function WishPage() {
   } = useForm({ mode: "onBlur" });
 
   const onSubmit = async(data) => {
-    const newWish = {
+    const json = {
       id: requests.length + 1,
       title: data.title,
       author: data.author,
@@ -34,7 +34,7 @@ export default function WishPage() {
       date: new Date().toLocaleDateString()
     };
 
-    setRequests([...requests, newWish]);
+    setRequests([...requests, json]);
 
     try {
       const res = await axios.post('https://storylight.zeabur.app/webhook-test/wish-form', json);
